@@ -1,0 +1,133 @@
+{
+  "version": 1,
+  "author": "Ian Connor",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-esp32-devkit-v1", "id": "esp", "top": 167.9, "left": -91.4, "attrs": {} },
+    {
+      "type": "wokwi-neopixel-canvas",
+      "id": "neopixels1",
+      "top": -303.7,
+      "left": 498.7,
+      "rotate": -90,
+      "attrs": { "rows": "70", "cols": "1", "pixelate": "circle", "matrixBrightness": "3.5" }
+    },
+    {
+      "type": "wokwi-neopixel-canvas",
+      "id": "neopixels2",
+      "top": -270,
+      "left": 500.5,
+      "rotate": -90,
+      "attrs": { "rows": "70", "cols": "1", "pixelate": "circle", "matrixBrightness": "3.5" }
+    },
+    {
+      "type": "wokwi-neopixel-canvas",
+      "id": "neopixels3",
+      "top": -240,
+      "left": 500.5,
+      "rotate": -90,
+      "attrs": { "rows": "70", "cols": "1", "pixelate": "circle", "matrixBrightness": "3.5" }
+    },
+    {
+      "type": "wokwi-neopixel-canvas",
+      "id": "neopixels4",
+      "top": -210,
+      "left": 500.5,
+      "rotate": -90,
+      "attrs": { "rows": "70", "cols": "1", "pixelate": "circle", "matrixBrightness": "3.5" }
+    },
+    {
+      "type": "wokwi-neopixel-canvas",
+      "id": "neopixels5",
+      "top": -180,
+      "left": 500.5,
+      "rotate": -90,
+      "attrs": { "rows": "70", "cols": "1", "pixelate": "circle", "matrixBrightness": "3.5" }
+    },
+    {
+      "type": "wokwi-neopixel-canvas",
+      "id": "neopixels6",
+      "top": -150,
+      "left": 500.5,
+      "rotate": -90,
+      "attrs": { "rows": "70", "cols": "1", "pixelate": "circle", "matrixBrightness": "3.5" }
+    },
+    {
+      "type": "wokwi-neopixel-canvas",
+      "id": "neopixels7",
+      "top": -120,
+      "left": 500.5,
+      "rotate": -90,
+      "attrs": { "rows": "70", "cols": "1", "pixelate": "circle", "matrixBrightness": "3.5" }
+    },
+    {
+      "type": "wokwi-neopixel-canvas",
+      "id": "neopixels8",
+      "top": -90,
+      "left": 500.5,
+      "rotate": -90,
+      "attrs": { "rows": "70", "cols": "1", "pixelate": "circle", "matrixBrightness": "3.5" }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btnGoal",
+      "top": 297,
+      "left": -381,
+      "rotate": 180,
+      "attrs": { "color": "yellow", "bounce": "1", "key": "3" }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btnPoint",
+      "top": 220.2,
+      "left": -381,
+      "rotate": 180,
+      "attrs": { "color": "blue", "bounce": "1", "key": "2" }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btnReset",
+      "top": 143.4,
+      "left": -381,
+      "rotate": 180,
+      "attrs": { "color": "green", "bounce": "1", "key": "1" }
+    },
+    { "type": "wokwi-vcc", "id": "vcc1", "top": 346.36, "left": 1526.4, "attrs": {} },
+    { "type": "wokwi-gnd", "id": "gnd1", "top": 460.8, "left": 1525.8, "attrs": {} }
+  ],
+  "connections": [
+    [ "esp:D5", "neopixels1:DIN", "green", [] ],
+    [ "esp:D12", "neopixels2:DIN", "green", [] ],
+    [ "esp:D13", "neopixels3:DIN", "green", [] ],
+    [ "esp:D14", "neopixels4:DIN", "green", [] ],
+    [ "esp:D15", "neopixels5:DIN", "green", [] ],
+    [ "esp:D18", "neopixels6:DIN", "green", [] ],
+    [ "esp:D19", "neopixels7:DIN", "green", [] ],
+    [ "esp:D21", "neopixels8:DIN", "green", [] ],
+    [ "esp:VIN", "neopixels1:VDD", "red", [] ],
+    [ "esp:VIN", "neopixels2:VDD", "red", [] ],
+    [ "esp:VIN", "neopixels3:VDD", "red", [] ],
+    [ "esp:VIN", "neopixels4:VDD", "red", [] ],
+    [ "esp:VIN", "neopixels5:VDD", "red", [] ],
+    [ "esp:VIN", "neopixels6:VDD", "red", [] ],
+    [ "esp:VIN", "neopixels7:VDD", "red", [] ],
+    [ "esp:VIN", "neopixels8:VDD", "red", [] ],
+    [ "esp:GND.2", "neopixels1:VSS", "black", [] ],
+    [ "esp:GND.2", "neopixels2:VSS", "black", [] ],
+    [ "esp:GND.2", "neopixels3:VSS", "black", [] ],
+    [ "esp:GND.2", "neopixels4:VSS", "black", [] ],
+    [ "esp:GND.2", "neopixels5:VSS", "black", [] ],
+    [ "esp:GND.2", "neopixels6:VSS", "black", [] ],
+    [ "esp:GND.2", "neopixels7:VSS", "black", [] ],
+    [ "esp:GND.2", "neopixels8:VSS", "black", [] ],
+    [ "esp:TX0", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX0", "$serialMonitor:TX", "", [] ],
+    [ "btnGoal:1.l", "esp:GND.2", "black", [] ],
+    [ "btnGoal:2.l", "esp:D27", "blue", [] ],
+    [ "btnPoint:1.l", "esp:GND.2", "black", [] ],
+    [ "btnPoint:2.l", "esp:D26", "blue", [] ],
+    [ "btnReset:1.l", "esp:GND.2", "black", [] ],
+    [ "btnReset:2.l", "esp:D25", "blue", [] ]
+  ],
+  "dependencies": {}
+}
